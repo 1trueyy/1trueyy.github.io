@@ -29,3 +29,20 @@
 .store-footer span:last-child{font-weight:700}
 @media(max-width:920px){.store-heading{grid-template-columns:1fr 1fr}.store-heading h2{font-size:clamp(84px,12vw,135px)}.single-info h3{font-size:clamp(48px,6vw,72px)}.single-info strong{font-size:clamp(40px,5.1vw,64px)}}
 @media(max-width:680px){.singles{padding-top:0;padding-bottom:65px}.store-utility{margin-bottom:55px;min-height:58px;font-size:9px;gap:10px}.store-utility span:nth-child(2){display:none}.store-heading{grid-template-columns:1fr;gap:23px;margin-bottom:31px}.store-heading h2{font-size:clamp(100px,19vw,150px);margin-top:20px}.store-heading p{max-width:340px;font-size:12px}.singles-grid{gap:48px}.single-info{padding-top:21px}.single-info h3{font-size:clamp(54px,11vw,89px)}.single-info strong{font-size:clamp(42px,9vw,66px)}.purchase-cta{padding:20px 15px;gap:10px;font-size:11px}.purchase-cta small{font-size:9px}.store-footer{margin-top:50px;font-size:9px;line-height:1.5}}
+
+
+/* Digital product fulfillment — Payhip link states and customer journey */
+.purchase-pending{cursor:default;background:#252525;color:#f2f2f2}
+.purchase-pending small{color:#aaa}
+a.purchase-live{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:#131313;color:white;transition:background .18s ease}
+a.purchase-live:hover,a.purchase-live:focus-visible{background:#c2333d}
+a.purchase-live small{color:#fff}
+.buy-flow{margin-top:65px;border-top:2px solid #111;border-bottom:1px solid #bbb6ab;padding:30px 0 35px;display:grid;grid-template-columns:minmax(180px,.75fr) minmax(0,2fr);gap:35px;color:#111}
+.buy-flow-title .eyebrow{color:#6c6862}
+.buy-flow-title h3{font:900 clamp(28px,3.6vw,50px)/.94 'Barlow Condensed',Impact,sans-serif;margin:15px 0 0}
+.buy-flow-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.buy-flow-steps>div{padding-left:16px;border-left:1px solid #c7c3bc}
+.buy-flow-steps b{font-size:11px;letter-spacing:.1em}
+.buy-flow-steps p{font-size:12px;line-height:1.75;color:#5b5852;margin:11px 0 0}
+@media(max-width:850px){.buy-flow{grid-template-columns:1fr;gap:22px}.buy-flow-steps{gap:14px}}
+@media(max-width:530px){.buy-flow{margin-top:45px;padding:23px 0}.buy-flow-steps{grid-template-columns:1fr;gap:20px}.buy-flow-steps>div{padding-left:13px}}
