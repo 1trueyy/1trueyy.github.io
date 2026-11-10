@@ -3,14 +3,14 @@
 ## Confirmed architecture
 - Public website: https://1trueyy.github.io/
 - Website source: https://github.com/1trueyy/1trueyy.github.io
-- Digital payment/fulfillment: Payhip + Stripe, optionally PayPal
+- Digital payment/fulfillment: Payhip + Stripe, prioritizing Cash App Pay and card checkout for Chime debit cards. PayPal is optional later.
 - Domain cost: $0 to use the current GitHub Pages URL
 - Payhip Free plan: $0 monthly; Payhip 5% per sale + payment processor fees
 - Fans do not need GitHub accounts. They can purchase from a hosted Payhip checkout.
 
 ## Set up Payhip
 1. Create your Payhip store at https://payhip.com/ with the brand name **Truey / 1096 Entertainment**.
-2. In Payhip **Account → Settings → Payment Details**, connect the authorized 1096 Entertainment Stripe account. The store owner must approve Stripe's sign-in / authorization. Add PayPal if desired (separately approved).
+2. In Payhip **Account → Settings → Payment Details**, connect the authorized 1096 Entertainment Stripe account. The store owner must approve Stripe's sign-in / authorization. In Stripe Payment Methods, enable Cash App Pay if the Stripe account and Payhip checkout support it. Chime customers pay with their Chime Visa debit cards through normal card checkout. PayPal can be added later.
 3. Add two **Digital Product** listings:
    - **Truey — Fake Killas (Digital Download)**, $1.99 USD.
    - **Truey — Shit Crazy (Digital Download)**, $1.99 USD.
@@ -39,10 +39,10 @@ No webhook, payment secrets, customer data, or music files belong on GitHub Page
 ## Customer delivery
 Successful buyers go to Payhip's download page and receive an emailed receipt with a download link. Test both paths before promoting the store. Payhip supports a 100%-off test coupon, so you can verify the checkout and fulfillment process without charging someone.
 
-## Supported payment methods
+## Priority payment methods (not enabled until the authorized accounts are connected)
 - Stripe: cards, and eligible wallets such as Apple Pay and Cash App Pay (enable/confirm each in Stripe/Payhip).
 - PayPal: PayPal checkout; Venmo availability depends on merchant, checkout configuration, platform and buyer eligibility.
-- Chime: normal compatible Chime debit card used at card checkout, not a standalone Chime Payhip gateway.
+- Chime: compatible Chime Visa debit cards at Stripe card checkout, **not** a standalone Chime Payhip gateway or Chime Pay Anyone transfer. Chime does not offer business accounts.
 - Never promise every wallet option until the actual buyer checkout shows it.
 
 ## Store management and sales
