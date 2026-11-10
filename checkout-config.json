@@ -1,0 +1,7 @@
+{
+  "note": "Only insert real Payhip product URLs after both audio files, price and payment processing are configured and tested. Never upload paid MP3 or WAV files into this public GitHub repository.",
+  "products": {
+    "fake-killas": null,
+    "shit-crazy": null
+  }
+}
