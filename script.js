@@ -13,7 +13,7 @@ async function initializePayhipCheckout(){
       if(typeof rawUrl!=="string"||!rawUrl.trim())continue;
       let url;
       try{url=new URL(rawUrl)}catch{continue}
-      if(url.protocol!=="https:"||url.hostname!=="payhip.com"||!(/^\\/b\\/[a-zA-Z0-9_-]+/.test(url.pathname)||url.pathname==="/buy"))continue;
+      if(url.protocol!=="https:"||url.hostname!=="payhip.com"||!((url.pathname.startsWith("/b/")&&url.pathname.length>3)||(url.pathname==="/buy"&&url.searchParams.has("link"))))continue;
       const placeholder=document.querySelector('[data-checkout-product="'+key+'"]');
       if(!placeholder)continue;
       const link=document.createElement("a");
