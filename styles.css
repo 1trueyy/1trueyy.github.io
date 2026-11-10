@@ -54,3 +54,11 @@ a.purchase-live small{color:#fff}
 .payment-preview small{font-size:9px;color:#625e57;font-weight:700;letter-spacing:.08em}
 .payment-preview>p{width:100%;margin:2px 0 16px;font-size:11px;color:#5e5a55;line-height:1.5}
 @media(max-width:680px){.payment-preview{gap:10px}.payment-preview>strong{width:100%}.payment-preview>span{flex:1;min-width:130px;padding:12px 11px;font-size:10px}.payment-preview>p{margin-bottom:10px}}
+
+/* Expand payment display to comprehensive wallet and card support */
+.payment-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));align-items:stretch;gap:10px 12px;padding:28px 0 6px}
+.payment-preview>strong,.payment-preview>p{grid-column:1/-1}
+.payment-preview>strong{margin-right:0;margin-bottom:6px}
+.payment-preview>span{min-width:0;justify-content:center;background:#e9e6df;padding:15px 14px;min-height:66px}
+.payment-preview>p{margin:9px 0 12px}
+@media(max-width:680px){.payment-preview{grid-template-columns:repeat(2,minmax(0,1fr))}.payment-preview>strong{width:auto}.payment-preview>span{min-width:0;padding:12px 10px;font-size:10px}.payment-preview>p{margin-bottom:10px}}
