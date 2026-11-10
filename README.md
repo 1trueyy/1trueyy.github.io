@@ -5,6 +5,8 @@ Public-facing, no-login music site for Truey / 1096 Entertainment, hosted at htt
 ## Design
 A minimal, artwork-first artist music storefront with large cover tiles, black-and-ivory palette, bold typography, and a muted Fake Killas YouTube video behind the main homepage banner.
 
+**Current checkout status:** Payhip integration is wired but disabled until files, merchant authorization, and verified product URLs are configured. See [PAYHIP_SETUP.md](PAYHIP_SETUP.md). Do not publish unprotected MP3 or WAV files in GitHub.
+
 ## Singles — $1.99 planned downloads
 - **Fake Killas** — from **Mr. Rapper** (2023). The store uses that album's official Apple Music artwork, because Fake Killas is published on that album. If Truey has a separate intended cover for this digital sale, replace the image after receiving the exact cover from the artist.
 - **Shit Crazy** — official 2022 single artwork from Apple Music.
