@@ -3,14 +3,14 @@
 ## Confirmed architecture
 - Public website: https://1trueyy.github.io/
 - Website source: https://github.com/1trueyy/1trueyy.github.io
-- Digital payment/fulfillment: Payhip + Stripe, prioritizing Cash App Pay and card checkout for Chime debit cards. PayPal is optional later.
+- Digital payment/fulfillment: Payhip + Stripe + PayPal. Enable eligible cards, Apple Pay, Google Pay, Cash App Pay, PayPal, and US Venmo where PayPal actually makes it available; Chime customers pay via Chime debit cards at regular card checkout.
 - Domain cost: $0 to use the current GitHub Pages URL
 - Payhip Free plan: $0 monthly; Payhip 5% per sale + payment processor fees
 - Fans do not need GitHub accounts. They can purchase from a hosted Payhip checkout.
 
 ## Set up Payhip
 1. Create your Payhip store at https://payhip.com/ with the brand name **Truey / 1096 Entertainment**.
-2. In Payhip **Account → Settings → Payment Details**, connect the authorized 1096 Entertainment Stripe account. The store owner must approve Stripe's sign-in / authorization. In Stripe Payment Methods, enable Cash App Pay if the Stripe account and Payhip checkout support it. Chime customers pay with their Chime Visa debit cards through normal card checkout. PayPal can be added later.
+2. In Payhip **Account → Settings → Payment Details**, connect the authorized **Stripe** account AND **PayPal** account. The store owner must approve both sign-ins and verification. In **Stripe Dashboard → Settings → Payment methods**, enable the available card and wallet methods, including Apple Pay, Google Pay, and Cash App Pay if eligible. Check the published Payhip checkout on mobile and desktop: an enabled Stripe method is not guaranteed to show for every buyer. PayPal is a separate checkout method; **Venmo may appear for eligible US buyers, but is not guaranteed by Payhip**. Chime is accepted when a supported Chime debit card is used at card checkout.
 3. Add two **Digital Product** listings:
    - **Truey — Fake Killas (Digital Download)**, $1.99 USD.
    - **Truey — Shit Crazy (Digital Download)**, $1.99 USD.
@@ -39,11 +39,22 @@ No webhook, payment secrets, customer data, or music files belong on GitHub Page
 ## Customer delivery
 Successful buyers go to Payhip's download page and receive an emailed receipt with a download link. Test both paths before promoting the store. Payhip supports a 100%-off test coupon, so you can verify the checkout and fulfillment process without charging someone.
 
-## Priority payment methods (not enabled until the authorized accounts are connected)
-- Stripe: cards, and eligible wallets such as Apple Pay and Cash App Pay (enable/confirm each in Stripe/Payhip).
-- PayPal: PayPal checkout; Venmo availability depends on merchant, checkout configuration, platform and buyer eligibility.
-- Chime: compatible Chime Visa debit cards at Stripe card checkout, **not** a standalone Chime Payhip gateway or Chime Pay Anyone transfer. Chime does not offer business accounts.
-- Never promise every wallet option until the actual buyer checkout shows it.
+## Payment methods to configure and verify
+Connect **Stripe + PayPal** within Payhip. A payment method should appear on the live storefront only if the processor and buyer are eligible. Test on phone and desktop.
+
+| Method | How it is handled |
+|---|---|
+| Debit / credit cards (Visa, Mastercard, Amex, etc.) | Stripe Payhip card checkout |
+| Apple Pay | Stripe if enabled, eligible browser/device/buyer |
+| Google Pay | Stripe if enabled, eligible browser/device/buyer |
+| Cash App Pay | Stripe if enabled, eligible US buyer |
+| PayPal | Connected PayPal via Payhip |
+| Venmo | May be offered through PayPal in eligible US checkouts; confirm that it actually shows on Payhip before advertising it as available |
+| Chime | Customer's compatible Chime debit card at the standard debit/credit card checkout; not a standalone Chime Payhip gateway |
+
+**Important:** Do not set up manual transfers through Cash App, Venmo, or Chime as a substitute for secure Payhip checkout: those transfers will not automatically authorize or deliver song files. Never store bank/Stripe credentials in GitHub.
+
+Source: [Payhip — Connect Stripe](https://help.payhip.com/article/65-connecting-your-stripe-account), [Payhip — Connect PayPal](https://help.payhip.com/article/64-connecting-your-paypal-account), [Payhip — How Do I Get Paid?](https://help.payhip.com/article/173-how-do-i-get-paid).
 
 ## Store management and sales
 Payhip's Customers / Orders dashboard shows orders and product sales. These website sales do **not** automatically count as Apple iTunes purchases or Apple Music streams.
