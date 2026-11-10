@@ -46,3 +46,11 @@ a.purchase-live small{color:#fff}
 .buy-flow-steps p{font-size:12px;line-height:1.75;color:#5b5852;margin:11px 0 0}
 @media(max-width:850px){.buy-flow{grid-template-columns:1fr;gap:22px}.buy-flow-steps{gap:14px}}
 @media(max-width:530px){.buy-flow{margin-top:45px;padding:23px 0}.buy-flow-steps{grid-template-columns:1fr;gap:20px}.buy-flow-steps>div{padding-left:13px}}
+
+/* Planned Cash App Pay + Chime debit presentation */
+.payment-preview{display:flex;align-items:center;gap:15px;flex-wrap:wrap;padding:24px 0 4px;color:#161616}
+.payment-preview>strong{font-size:10px;letter-spacing:.14em;margin-right:9px;color:#55504a}
+.payment-preview>span{display:inline-flex;flex-direction:column;gap:2px;min-width:135px;border:1px solid #aaa59d;padding:12px 17px;font-size:12px;font-weight:900;letter-spacing:.075em}
+.payment-preview small{font-size:9px;color:#625e57;font-weight:700;letter-spacing:.08em}
+.payment-preview>p{width:100%;margin:2px 0 16px;font-size:11px;color:#5e5a55;line-height:1.5}
+@media(max-width:680px){.payment-preview{gap:10px}.payment-preview>strong{width:100%}.payment-preview>span{flex:1;min-width:130px;padding:12px 11px;font-size:10px}.payment-preview>p{margin-bottom:10px}}
